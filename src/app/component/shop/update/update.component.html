@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+  <form #f="ngForm" (ngSubmit)="onSendMail()" class="form-signin form-group">
+    <label for="category">קטגוריה להוספה</label>
+    <input #category type="text" class="form-control" name="category" [(ngModel)]="shop.category"   required >
+    <br><button class="btn btn-primary" [disabled]="!f.form.valid">שלח</button>
+  </form><br><br>
+</div>
+<div class="col"></div>
+</div>

@@ -1,0 +1,31 @@
+<br><br><br><br><br>
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+
+<form #f="ngForm" (ngSubmit)="newShop()" class="form-signin">
+    <div class="form-group mb-4">
+      <div class="col-xs-7">
+         <label for="name">שם</label>
+         <input #name type="text" class="form-control" name="name" [(ngModel)]="shop.nameShop"  placeholder="הקלד שם חנות" required>
+         <label for="mail">מייל</label>
+         <input #mail type="email" class="form-control" name="mail" [(ngModel)]="shop.mailShop" placeholder="הקלד כתובת מייל" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+         <label for="password">סיסמה</label>
+         <input #password type="password" class="form-control" name="password" [(ngModel)]="shop.passwordShop" placeholder=" הקלד סיסמא " required>
+         <label for="phone">טלפון</label>
+         <input #phone type="tel" class="form-control" name="phone" [(ngModel)]="shop.phoneShop"  placeholder="הקלד טלפון חנות" minlength=9 maxlength=10>
+         <label for="longitude">x מיקום</label>
+         <input #longitude type="float" class="form-control" name="longitude" [(ngModel)]="shop.longitude"  placeholder="מיקום x" required>
+         <label for="latitude">y מיקום</label>
+         <input #latitude type="float" class="form-control" name="latitude" [(ngModel)]="shop.latitude"  placeholder="מיקום y" required>
+         <label for="fromHour">פתוח משעה</label>
+         <input #fromHour type="time" class="form-control" name="fromHour" [(ngModel)]="shop.fromHour" placeholder="פתוח משעה"  pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
+         <label for="toHour">עד שעה</label>
+         <input #toHour type="time" class="form-control" name="toHour" [(ngModel)]="shop.toHour" placeholder="עד שעה" pattern="^|((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))$">
+      </div>
+    </div>
+    <button class="btn btn-primary" [disabled]="!f.form.valid">הרשם</button>
+  </form>
+  </div>
+  <div class="col"></div>
+  </div>
